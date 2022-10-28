@@ -8,7 +8,7 @@ const {
  */
 //使用
 const isDev = require('electron-is-dev');
-const winURL = isDev ? 'http://localhost:3000':`file://${path.join(__dirname, './index.html')}`;
+const winURL = isDev ? 'http://localhost:8080':`file://${path.join(__dirname, './index.html')}`;
 
 let mainWindow;
 
@@ -17,6 +17,7 @@ function createWindow () {
      * Initial window options
      */
     mainWindow = new BrowserWindow({
+        fullscreen: true, // 是否全屏
         height: 750,
         width: 1100,
         center: true, // 是否出现在屏幕居中的位置
@@ -27,11 +28,14 @@ function createWindow () {
         backgroundColor:'#fff',// 窗口的背景颜色为十六进制值
         titleBarStyle:'hidden',//窗口标题栏的样式
         webPreferences:{//网页功能的设置
-            nodeIntegration: true,//是否集成node
+            nodeIntegration: true, //是否集成node(如果有web引入地图错误改成false)
+            contextIsolation: false,
             devTools:true,//是否开启 DevTools
             // webSecurity: false//是否禁用同源策略(上线删除)
         }
     });
+
+    // mainWindow.webContents.openDevTools() // 打开调试
 
     mainWindow.loadURL(winURL);
     // mainWindow.webContents.openDevTools();//打包后可打开调试窗口
