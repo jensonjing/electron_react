@@ -2,6 +2,7 @@ const {
     app,
     BrowserWindow
 }=require('electron');
+const path = require('path')
 
 /**
  *安装electron-is-dev库，判断是否是开发环境 
