@@ -1,0 +1,40 @@
+.w_wrap {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.ant-layout {
+  .ant-layout-header {
+    background-color: #4d97f3 !important;
+  }
+  .ant-layout-content {
+    background-color: #fff;
+    min-height: calc(100vh - 148px);
+    box-sizing: border-box;
+    padding: 10px 15px;
+    overflow-y: auto;
+  }
+  .provide-Box {
+    position: absolute;
+    top: 0;
+    right: 150px;
+    z-index: 5;
+    .ant-radio-group {
+      .ant-radio-button-wrapper {
+        box-shadow: none;
+        border: 1px solid #1890ff;
+        background-color: #1890ff;
+        color: #fff;
+        height: inherit;
+        line-height: normal;
+        border-left: 0;
+        padding: 5px 15px;
+      }
+      .ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
+        box-shadow: none;
+        background-color: #fff;
+        color: #666;
+      }
+    }
+  }
+}
