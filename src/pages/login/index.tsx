@@ -1,4 +1,4 @@
-import './index.less'
+import './index.scss'
 import { useNavigate } from 'react-router-dom'
 import Auth from '@/router/auth'
 import store from '@/store/index'

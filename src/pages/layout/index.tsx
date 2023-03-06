@@ -1,19 +1,19 @@
-import './index.less'
+import './index.scss'
 import 'antd/dist/reset.css';
 
-// import { Layout, ConfigProvider, Radio } from 'antd';
-// import zhCN from 'antd/es/locale/zh_CN';
-// import enUS from 'antd/es/locale/en_US';
-// import Headerdom from '@/components/Header';
-// import LeftMenu from '@/components/LeftMenu';
-// import FooterDom from '@/components/Footer';
-// import { Route } from 'react-router'
-// import { HashRouter } from 'react-router-dom'
-// const { Header, Footer, Sider, Content } = Layout;
+import { Layout, ConfigProvider, Radio } from 'antd';
+import zhCN from 'antd/es/locale/zh_CN';
+import enUS from 'antd/es/locale/en_US';
+import Headerdom from '@/components/Header';
+import LeftMenu from '@/components/LeftMenu';
+import FooterDom from '@/components/Footer';
+import { Route } from 'react-router'
+import { HashRouter } from 'react-router-dom'
+const { Header, Footer, Sider, Content } = Layout;
 import { useRef, useState } from 'react';
 
 function App(props: any) {
-  // const locale = useRef(zhCN)
+  const locale = useRef(zhCN)
 
   const changeRoute = (e: any, path: string) => {
     // this.setState(() => ({
@@ -30,35 +30,34 @@ function App(props: any) {
     // }));
   }
   return (
-    <div>外部</div>
-    // <ConfigProvider locale={locale.current}>
-    //   <Layout className="w_wrap">
-    //     <Header>
-    //       <Headerdom />
-    //       <div className="provide-Box">
-    //         <Radio.Group value={locale} onChange={(e) => changeLocale(e)}>
-    //           <Radio.Button key="cn" value={zhCN}>
-    //             中文
-    //           </Radio.Button>
-    //           <Radio.Button key="en" value={enUS}>
-    //             English
-    //           </Radio.Button>
-    //         </Radio.Group>
-    //       </div>
-    //     </Header>
-    //     <Layout>
-    //       <Sider width="256px" style={{ borderRight: '1px solid #f1f1f1' }}>
-    //         <LeftMenu changeRoute={changeRoute} />
-    //       </Sider>
-    //       <Content>
-    //         <div>{props.children}</div>
-    //       </Content>
-    //     </Layout>
-    //     <Footer>
-    //       <FooterDom />
-    //     </Footer>
-    //   </Layout>
-    // </ConfigProvider>
+    <ConfigProvider locale={locale.current}>
+      <Layout className="w_wrap">
+        <Header>
+          <Headerdom />
+          <div className="provide-Box">
+            <Radio.Group value={locale} onChange={(e) => changeLocale(e)}>
+              <Radio.Button key="cn" value={zhCN}>
+                中文
+              </Radio.Button>
+              <Radio.Button key="en" value={enUS}>
+                English
+              </Radio.Button>
+            </Radio.Group>
+          </div>
+        </Header>
+        <Layout>
+          <Sider width="256px" style={{ borderRight: '1px solid #f1f1f1' }}>
+            <LeftMenu changeRoute={changeRoute} />
+          </Sider>
+          <Content>
+            <div>{props.children}</div>
+          </Content>
+        </Layout>
+        <Footer>
+          <FooterDom />
+        </Footer>
+      </Layout>
+    </ConfigProvider>
   )
 }
 

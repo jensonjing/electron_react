@@ -1,7 +1,10 @@
+import './index.scss'
+import 'antd/dist/reset.css';
 import { useNavigate } from 'react-router-dom'
 import Auth from '@/router/auth'
 import { useEffect } from 'react'
 import store from '@/store'
+import { Button } from 'antd';
 
 export default function Home() {
   const navgate = useNavigate()
@@ -23,8 +26,8 @@ export default function Home() {
     console.log(store.getState())
   },[])
   return <>
-    <div onClick={goLogin}>About</div>
-    <div onClick={goLog}>Log</div>
-    <div onClick={Leave}>Logout</div>
+    <Button type='primary' style={{display: 'block',marginBottom: '15px'}} onClick={goLogin}>About</Button>
+    <Button type='primary' style={{display: 'block',marginBottom: '15px'}} onClick={goLog}>Log</Button>
+    <Button type='primary' style={{display: 'block',marginBottom: '15px'}} onClick={Leave}>Logout</Button>
   </>
 }
