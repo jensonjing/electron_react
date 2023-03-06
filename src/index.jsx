@@ -1,3 +1,4 @@
+import './index.less'
 import { createRoot } from 'react-dom/client'
 import App from './router'
 import { AuthProvider, RequireAuth } from './router/auth' // 引入路由鉴权

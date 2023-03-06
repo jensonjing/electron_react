@@ -1,0 +1,1 @@
+export const CHANGE_IMG = 'change_img'

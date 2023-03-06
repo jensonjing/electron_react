@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import Auth from '@/router/auth'
+import { useEffect } from 'react'
+import store from '@/store'
 
 export default function Home() {
   const navgate = useNavigate()
@@ -17,6 +19,9 @@ export default function Home() {
     })
   }
 
+  useEffect(() => {
+    console.log(store.getState())
+  },[])
   return <>
     <div onClick={goLogin}>About</div>
     <div onClick={goLog}>Log</div>
