@@ -1,4 +1,4 @@
-import './Footer.less';
+import './Footer.scss';
 import React from 'react';
 
 interface AppProps {}

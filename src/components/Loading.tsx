@@ -1,4 +1,4 @@
-import './Loading.less';
+import './Loading.scss';
 import { Spin } from 'antd';
 
 function Loading(props: any) {

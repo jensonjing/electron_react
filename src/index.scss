@@ -20,3 +20,20 @@ code {
   padding-top: 60px;
   box-sizing: border-box;
 }
+.w_wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.ant-layout {
+  .ant-layout-header {
+    background-color: #4d97f3 !important;
+  }
+  .ant-layout-content {
+    background-color: #fff;
+    min-height: calc(100vh - 148px);
+    box-sizing: border-box;
+    padding: 10px 15px;
+    overflow-y: auto;
+  }
+}

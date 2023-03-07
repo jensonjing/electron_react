@@ -4,6 +4,17 @@ import App from './router'
 import { AuthProvider, RequireAuth } from './router/auth' // 引入路由鉴权
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Login from '@/pages/login'
+import { Layout, ConfigProvider, Radio } from 'antd';
+import zhCN from 'antd/es/locale/zh_CN';
+import Headerdom from '@/components/Header';
+import LeftMenu from '@/components/LeftMenu';
+import FooterDom from '@/components/Footer';
+
+const { Header, Footer, Sider, Content } = Layout;
+let locale: any = zhCN
+function changeLocale(e: any) {
+    locale = e
+}
 
 const container: any = document.getElementById('root')
 const root = createRoot(container)
@@ -15,8 +26,24 @@ root.render(
                 <Route path='*' element={
                     <RequireAuth>
                         {/* 需要登录才能用的组件 */}
-                        <div>公共</div>
-                        <App />
+                        <ConfigProvider locale={locale}>
+                            <Layout className="w_wrap">
+                                <Header>
+                                    <Headerdom onChangeLoc={changeLocale}/>
+                                </Header>
+                                <Layout>
+                                    <Sider width="256px" style={{ borderRight: '1px solid #f1f1f1' }}>
+                                        <LeftMenu />
+                                    </Sider>
+                                    <Content>
+                                        <App />
+                                    </Content>
+                                </Layout>
+                                <Footer>
+                                    <FooterDom />
+                                </Footer>
+                            </Layout>
+                        </ConfigProvider>
                     </RequireAuth>
                 }/>
             </Routes>
