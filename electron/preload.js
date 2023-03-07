@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // 最小化图标
     const smdv = document.createElement('img');
     smdv.setAttribute('src', NODE_ENV === 'development' ? '/icons/min1.png' : minIn);
-    smdv.style.width = '15px';
+    smdv.style.width = '28px';
     smdv.style.marginRight = '5px';
     smdv.style.padding = '6px';
     smdv.style.cursor = 'pointer';
@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // 最大化图标
     const bigdv = document.createElement('img');
     bigdv.setAttribute('src', NODE_ENV === 'development' ? '/icons/max1.png' : maxIn1);
-    bigdv.style.width = '15px';
+    bigdv.style.width = '28px';
     bigdv.style.marginRight = '5px';
     bigdv.style.padding = '6px';
     bigdv.style.cursor = 'pointer';
@@ -71,7 +71,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // 还原图标
     const resetdv = document.createElement('img');
     resetdv.setAttribute('src', NODE_ENV === 'development' ? '/icons/max3.png' : maxIn3);
-    resetdv.style.width = '15px';
+    resetdv.style.width = '28px';
     resetdv.style.marginRight = '5px';
     resetdv.style.padding = '6px';
     resetdv.style.cursor = 'pointer';
@@ -92,7 +92,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // 关闭图标
     const closedv = document.createElement('img');
     closedv.setAttribute('src', NODE_ENV === 'development' ? '/icons/close.png' : closeIn);
-    closedv.style.width = '15px';
+    closedv.style.width = '28px';
     closedv.style.marginRight = '5px';
     closedv.style.padding = '6px';
     closedv.style.cursor = 'pointer';

@@ -39,8 +39,8 @@ export default function LeftMenu(props: any) {
     if (pkey) {
       setselectedKeys(pathname.split('/')[1])
       setdefaultSelectedKeys(pathname.split('/')[1])
-      setdefaultOpenKeys(pkey)
-      setopenKeys(pkey)
+      setdefaultOpenKeys([pkey])
+      setopenKeys([pkey])
     } else {
       console.log(selectedKeys[0])
       navigate('/home')
