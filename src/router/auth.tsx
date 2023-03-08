@@ -1,22 +1,10 @@
-// // 路由鉴权/登录拦截
-// const { Redirect } = require('dva').router;
-
-// // eslint-disable-next-line
-// export default (props: any) => {
-//   const isLogin = window.sessionStorage.getItem('token');
-//   if (isLogin) {
-//     return <div>{props.children}</div>;
-//   } else {
-//     return <Redirect to="/login" />;
-//   }
-// }
 import React, { useState, createContext, useContext } from "react";
 import { Navigate } from 'react-router-dom';
 
 const AuthContext = createContext({});
-
 /**
  * 自定义hook，函数返回Context值，包括authed状态，login，loginout函数来修改authed的值
+ * 路由鉴权/登录拦截
  */
 function useAuth() {
   const isLogin = sessionStorage.getItem('token') ? true : false

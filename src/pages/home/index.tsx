@@ -29,5 +29,6 @@ export default function Home() {
     <Button type='primary' style={{display: 'block',marginBottom: '15px'}} onClick={goLogin}>About</Button>
     <Button type='primary' style={{display: 'block',marginBottom: '15px'}} onClick={goLog}>Log</Button>
     <Button type='primary' style={{display: 'block',marginBottom: '15px'}} onClick={Leave}>Logout</Button>
+    <img src={ require('@/imgs/emoji_a.png') }/>
   </>
 }

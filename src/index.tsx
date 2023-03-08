@@ -2,9 +2,9 @@ import './index.scss'
 import { createRoot } from 'react-dom/client'
 import App from './router'
 import { AuthProvider, RequireAuth } from './router/auth' // 引入路由鉴权
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { HashRouter as Router, Route, Routes } from 'react-router-dom'
 import Login from '@/pages/login'
-import { Layout, ConfigProvider, Radio } from 'antd';
+import { Layout, ConfigProvider } from 'antd';
 import zhCN from 'antd/es/locale/zh_CN';
 import Headerdom from '@/components/Header';
 import LeftMenu from '@/components/LeftMenu';

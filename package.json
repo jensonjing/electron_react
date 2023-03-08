@@ -1,8 +1,9 @@
 {
   "name": "react_electron",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "private": true,
   "main": "electron/main.js",
+  "author": "JensonJin",
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
@@ -73,8 +74,8 @@
     "build:electron": "yarn build && electron-builder"
   },
   "build": {
-    "appId": "jensonjing",
-    "productName": "ElectronApp",
+    "appId": "JensonJin",
+    "productName": "ReactElectron",
     "copyright": "Copyright © 2020 <jensonjin>",
     "compression": "store",
     "win": {
@@ -84,13 +85,13 @@
       "category": "public.app-category.utilities"
     },
     "nsis": {
-      "guid": "JENSONJINELECTRON",
+      "guid": "JENSONJINGREACTELECTRON",
       "deleteAppDataOnUninstall": true,
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "JensonJin"
+      "shortcutName": "ReactElectron"
     },
     "files": [
       "dist/**/*",
