@@ -9,14 +9,15 @@
   }
   .loginOut {
     cursor: pointer;
+    margin-right: 100px;
   }
   .logo {
     width: 40px;
   }
   .provide-Box {
     position: absolute;
-    top: 60px;
-    right: 300px;
+    top: 0;
+    right: 400px;
     z-index: 5;
     .ant-radio-group {
       .ant-radio-button-wrapper {
