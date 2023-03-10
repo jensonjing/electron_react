@@ -26,7 +26,7 @@ export default function LeftMenu(props: any) {
   };
 
   useEffect(()=> {
-    const pathname: any = (window as any).location.pathname;
+    const pathname: any = (window as any).location.hash;
     let pkey: any = '';
     Menus.forEach((v: any) => {
       v.children.forEach((item: any) => {
@@ -42,8 +42,7 @@ export default function LeftMenu(props: any) {
       setdefaultOpenKeys([pkey])
       setopenKeys([pkey])
     } else {
-      console.log(selectedKeys[0])
-      navigate('/home')
+      navigate('/' + selectedKeys[0])
     }
   }, [])
 
