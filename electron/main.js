@@ -18,8 +18,8 @@ process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true'; // 屏蔽安全警�
 //托盘对象
 let appTray = null
 let mainWindow = null
-const ICO = path.join(__dirname, '../dist/icons/icon.ico'); // 打包后系统托盘图标
-const nIcon = path.join(__dirname, '../dist/icons/64x64_n.ico'); // 打包后的系统托盘图标（闪烁用）
+const ICO = path.join(__dirname, NODE_ENV === 'development' ? '../public/icons/icon.ico' : '../dist/icons/icon.ico'); // 打包后系统托盘图标
+const nIcon = path.join(__dirname, NODE_ENV === 'development' ? '../public/icons/64x64_n.ico' : '../dist/icons/64x64_n.ico'); // 打包后的系统托盘图标（闪烁用）
 
 //解决10.X版本跨域不成功问题(上线删除)
 // app.commandLine.appendSwitch('disable-features', 'OutOfBlinkCors');
